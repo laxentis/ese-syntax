@@ -1,0 +1,59 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "Euroscope ESE",
+    "patterns": [
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#strings"
+        }
+    ],
+    "repository": {
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "markup.heading.ese",
+                    "match": "\\[(FREETEXT|SIDSSTARS|POSITIONS|AIRSPACE|RADAR|GROUND)\\]"
+                },
+                {
+                    "name": "keyword.control.ese",
+                    "match": "\\b(OFFSET|STAR|SID|SECTORLINE|SECTOR|FIR_COPX|COPX|TAXI|EXIT|RADAR2|RADAR|MSAW)\\b"
+                },
+                {
+                    "name": "support.function.ese",
+                    "match": "(DISPLAY|COORD|CIRCLE_SECTORLINE|OWNER|ALTOWNER|BORDER|ACTIVE|GUEST|DEPAPT|ARRAPT|DISPLAY_SECTORLINE)"
+                },
+                {
+                    "name": "keyword.other.ese",
+                    "match": "(N|S|E|W)\\d{1,3}\\.\\d{1,2}\\.\\d{1,2}\\.\\d+"
+                },
+                {
+                    "name": "comment.line.ese",
+                    "begin": ";",
+                    "end": "\\n"
+                },
+                {
+                    "name": "constant.numeric.ese",
+                    "match": "\\b\\d{3}\\.\\d{3}\\b"
+                },
+                {
+                    "name": "variable.ese",
+                    "match": "\\b[0-7]{4}\\b"
+                }
+            ]
+        },
+        "strings": {
+            "name": "string.quoted.double.ese",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.ese",
+                    "match": "\\\\."
+                }
+            ]
+        }
+    },
+    "scopeName": "source.ese"
+}

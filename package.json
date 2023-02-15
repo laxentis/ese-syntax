@@ -1,0 +1,25 @@
+{
+  "name": "ese-syntax",
+  "displayName": "ESE syntax",
+  "description": "Syntax highlighting for Euroscope ESE files",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "ese",
+      "aliases": ["Euroscope ESE", "ese"],
+      "extensions": [".ese"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "ese",
+      "scopeName": "source.ese",
+      "path": "./syntaxes/ese.tmLanguage.json"
+    }]
+  }
+}
