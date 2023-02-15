@@ -6,6 +6,7 @@
   "engines": {
     "vscode": "^1.75.0"
   },
+  "repository": {"url": "https://github.com/laxentis/ese-syntax", "type": "github"},
   "categories": [
     "Programming Languages"
   ],
